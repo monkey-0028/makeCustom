@@ -15,7 +15,7 @@
 > 1. open terminal
 > 2. Enter following code --
 >		* `git clone https://github.com/monkey-0028/makeCustom`
->		* `cd makeCustom.git`
+>		* `cd makeCustom`
 >		* `mv makeCustom /usr/local/bin/`
 >
 > That's it.
