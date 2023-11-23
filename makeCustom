@@ -1,1 +1,33 @@
 #!/bin/bash
+
+echo -n "Enter command : "
+read command
+$command &>/dev/null
+if [ $? != 0 ]
+then
+		echo "command doesn't exist..."
+		exit 0
+fi
+echo -n  "Enter custom command : "
+read custom
+$custom &>/dev/null
+if [ $? == 0 ]
+then
+		echo "This is already a command.. try another"
+		exit 0
+fi
+
+filename=".customdumpfile"
+touch $filename
+echo "#!/bin/bash" > $filename
+echo "options=\" \"" >> $filename
+echo "for item in \$@" >> $filename
+echo "do" >>$filename
+echo "options=\"\$options \$item\"" >> $filename
+echo "done" >> $filename
+echo "$command \$options" >>$filename
+chmod +x $filename
+sudo mv $filename /usr/local/bin/$custom
+
+echo "Custom command installed successfully!!"
+
