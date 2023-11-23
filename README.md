@@ -14,7 +14,7 @@
 ### INSTALLATION
 > 1. open terminal
 > 2. Enter following code --
->		* `git clone https://github.com/monkey-0028/makeCustom.git`
+>		* `git clone https://github.com/monkey-0028/makeCustom`
 >		* `cd makeCustom.git`
 >		* `mv makeCustom /usr/local/bin/`
 >
