@@ -4,7 +4,7 @@
                    to your desired command.
   
 
-> Most of the time, You will a long command a lot, and after some time it became annoying.
+> Sometimes,You will use a long command a lot, and after some time, it became annoying.
 > To fix that issue, **makeCustom** renames your code to a shorter one as per your desire.
 >
 ### HOW DOES IT WORK?	
@@ -26,4 +26,6 @@
 > You can also make fixes to the bug and send pull request.
 > 
 >
-
+### SUPPORT
+>**Currently, This application only support linux-command not windows..**
+>
