@@ -24,8 +24,17 @@
 >
 > In case of any bug or issue, please report to in the issue section of github.
 > You can also make fixes to the bug and send pull request.
-> 
 >
+### Example
+> If you are using git then you know that we have to enter `git status` again and again to check status of git-repo in your locals.
+> It is not a very long command but still it becomes annoying to type, over time.
+> Here is the solution!!
+> use **makeCustom** to rename this code to anything you want.. let's say `g`
+> Now -- **`git status` is equivalent to `g`**
+> and sub-commands like `git status -s` or `git staus -v` works fine like `g -s` or `g -v`.
+>
+> 
+
 ### SUPPORT
->**Currently, This application only support linux-command not windows..**
+>**Currently, This application only support linux-commands not windows..**
 >
