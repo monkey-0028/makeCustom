@@ -1,33 +1,35 @@
 #!/bin/bash
 
-echo -n "Enter command : "
+prin=$(which echo)
+
+$prin -n "Enter command : "
 read command
 $command &>/dev/null
 if [ $? != 0 ]
 then
-		echo "command doesn't exist..."
+		$prin "command doesn't exist..."
 		exit 0
 fi
-echo -n  "Enter custom command : "
+$prin -n  "Enter custom command : "
 read custom
 $custom &>/dev/null
 if [ $? == 0 ]
 then
-		echo "This is already a command.. try another"
+		$prin "This is already a command.. try another"
 		exit 0
 fi
 
 filename=".customdumpfile"
-touch $filename
-echo "#!/bin/bash" > $filename
-echo "options=\" \"" >> $filename
-echo "for item in \$@" >> $filename
-echo "do" >>$filename
-echo "options=\"\$options \$item\"" >> $filename
-echo "done" >> $filename
-echo "$command \$options" >>$filename
-chmod +x $filename
-sudo mv $filename /usr/local/bin/$custom
+$(which touch) $filename
+$prin "#!/bin/bash" > $filename
+$prin "options=\" \"" >> $filename
+$prin "for item in \$@" >> $filename
+$prin "do" >>$filename
+$prin "options=\"\$options \$item\"" >> $filename
+$prin "done" >> $filename
+$prin "$command \$options" >>$filename
+$(which chmod) +x $filename
+sudo $(which mv) $filename /usr/local/bin/$custom
 
-echo "Custom command installed successfully!!"
+$prin "Custom command installed successfully!!"
 
