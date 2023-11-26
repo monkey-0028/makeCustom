@@ -1,7 +1,6 @@
 # makeCustom
 
-**makeCustom** --  A terminal based application that rename long and repetitive command  
-                   to your desired command.
+**makeCustom** --  A terminal based application that rename long and repetitive command to your desired command.
   
 
 > Sometimes,You will use a long command a lot, and after some time, it became annoying.
@@ -22,7 +21,7 @@
 > makeCustom has been successfully installed in your system!
 > 
 >
-> In case of any bug or issue, please report to in the issue section of github.
+> In case of any bug or issue, please report to the issue section of github.
 > You can also make fixes to the bug and send pull request.
 >
 ### Example
@@ -36,5 +35,5 @@
 > 
 
 ### SUPPORT
->**Currently, This application only support linux-commands not windows..**
+>**Currently, This application only support unix-based os only...**
 >
