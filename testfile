@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# run this testfile
+# with valid options 
+# doesn't matter how many options are given 
+options=""
+for item in $@
+do
+		options+="\"$item\""
+		options+=" "
+done
+
+ls $options
+
+
+
