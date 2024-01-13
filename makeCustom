@@ -7,8 +7,14 @@ read command
 $command &>/dev/null
 if [ $? != 0 ]
 then
-		$prin "command doesn't exist..."
-		exit 0
+		if [[ $# != 0 && $1 == "-f"  ]]
+		then
+				:
+		else
+			$prin "Can't find this command..."
+			$prin "if you want to continue anyway use -f option"
+			exit 0
+		fi
 fi
 $prin -n  "Enter custom command : "
 read custom
