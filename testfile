@@ -4,13 +4,28 @@
 # with valid options 
 # doesn't matter how many options are given 
 options=""
+
 for item in $@
 do
-		options+="\"$item\""
+		if [[ "$item" = "_"* ]]
+		then
+				options+="\""
+				item="${item:1}"
+		fi
+		if [[ "$item" = *"_" ]]
+		then
+				item="${item:0:-1}"
+				options+="$item"
+				options+="\""
+				options+=" "
+				continue
+				
+		fi
+		options+="$item"
 		options+=" "
 done
 
-ls $options
-
+echo "$options"
+git commit -m $options
 
 
