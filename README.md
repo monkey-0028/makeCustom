@@ -33,11 +33,10 @@
 > Now -- **`git status` is equivalent to `g`**
 > and sub-commands like `git status -s` or `git staus -v` works fine like `g -s` or `g -v`.
 
-
-> ### NOTE ###
-> Any command using arg in format "string"
-> instead of quotes("") , use this : _string_
-> 
+### NOTE (Important **) ###
+> Any command using arg in format "string"  
+> instead of quotes("") , use this : _string_  
+>   
 ### SUPPORT
 >**Currently, This application only support unix-based os only...**
 >
