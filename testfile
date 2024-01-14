@@ -26,5 +26,4 @@ do
 done
 
 echo "$options"
-string="\"test commit\""
-git commit -m $string
+git commit -m $(cat com)
