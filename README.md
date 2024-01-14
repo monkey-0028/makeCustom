@@ -15,7 +15,8 @@
 > 2. Enter following code --
 >		* `git clone https://github.com/monkey-0028/makeCustom`
 >		* `cd makeCustom`
->		* `mv makeCustom /usr/local/bin/`
+>		* `sudo mv makeCustom /usr/local/bin/`
+>    * `sudo mv framework /usr/local/bin/` 
 >
 > That's it.
 > makeCustom has been successfully installed in your system!
