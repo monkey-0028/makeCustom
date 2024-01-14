@@ -4,26 +4,31 @@
 # with valid options 
 # doesn't matter how many options are given 
 options=""
-
+switch_string=0
+# 0 == false
 for item in $@
 do
 		if [[ "$item" = "_"* ]]
 		then
-				options+="\""
+				switch_string=1
 				item="${item:1}"
 		fi
 		if [[ "$item" = *"_" ]]
 		then
+				switch_string=0;
 				item="${item:0:-1}"
-				options+="$item"
-				options+="\""
-				options+=" "
-				continue
-				
 		fi
-		options+="$item"
-		options+=" "
+		if [ $switch_string == 1 ]
+		then
+				options+="$item"
+				options+="_"
+		else
+				options+="$item"
+				options+=" "
+		fi
+
+
 done
 
 echo "$options"
-git commit -m $(cat com)
+# git commit -m $(cat com)
