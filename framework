@@ -1,11 +1,6 @@
 #!/bin/bash
-
-# run this testfile
-# with valid options 
-# doesn't matter how many options are given 
 options=""
 switch_string=0
-# 0 == false
 for item in $@
 do
 		if [[ "$item" = "_"* ]]
@@ -26,9 +21,5 @@ do
 				options+="$item"
 				options+=" "
 		fi
-
-
 done
 
-echo "$options"
-# git commit -m $(cat com)

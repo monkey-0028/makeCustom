@@ -27,12 +27,7 @@ fi
 
 filename=".customdumpfile"
 $(which touch) $filename
-$prin "#!/bin/bash" > $filename
-$prin "options=\" \"" >> $filename
-$prin "for item in \$@" >> $filename
-$prin "do" >>$filename
-$prin "options=\"\$options \$item\"" >> $filename
-$prin "done" >> $filename
+cat framework >> $filename
 $prin "$command \$options" >>$filename
 $(which chmod) +x $filename
 sudo $(which mv) $filename /usr/local/bin/$custom
